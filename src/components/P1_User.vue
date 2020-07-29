@@ -9,22 +9,22 @@
 
         <label>
             <span>Имя<em>*</em></span>
-            <input type="text" :firstName="firstName" required>
+            <input type="text" v-model="firstName" required>
         </label>
 
         <label>
             <span>Отчество</span>
-            <input type="text" :middleName="middleName">
+            <input type="text" v-model="middleName">
         </label>
 
         <label>
-            <span>Дата рождения</span>
-            <input type="date" :dob="dob">
+            <span>Дата рождения<em>*</em></span>
+            <input type="date" v-model="dob" required>
         </label>
 
         <label>
             <span>Телефон<em>*</em></span>
-            <input type="number" v-bind:phone="phone" maxlength="11">
+            <input type="number" v-model="phone" maxlength="11">
         </label>
 
         <label>
@@ -38,8 +38,8 @@
         </label>
 
         <label>
-            <span>Группа клиентов</span>
-            <select v-model="clientsGroupModel" multiple>
+            <span>Группа клиентов<em>*</em></span>
+            <select v-model="clientsGroupModel" multiple required>
                 <option disabled>Выберите один или несколько вариантов</option>
                 <option v-for="(clGroup, index) in clientsGroups" v-bind:value="index" :key="index">
                     {{ clGroup }}
