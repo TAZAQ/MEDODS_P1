@@ -24,7 +24,7 @@
 
         <label>
             <span>Телефон<em>*</em></span>
-            <input type="number" v-model="phone" maxlength="11">
+            <input type="number" v-model="phone" maxlength="11" required>
         </label>
 
         <label>
