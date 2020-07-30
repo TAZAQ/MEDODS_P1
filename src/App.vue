@@ -28,10 +28,12 @@ export default {
     },
     methods: {
         validate: function () {
-            if (this.$refs.user_info.validate() &&
-                this.$refs.user_address.validate() &&
-                this.$refs.user_document.validate()
-            ) {
+            let isUserInfoValidate = this.$refs.user_info.validate();
+            let isUserAddressValidate = this.$refs.user_address.validate();
+            let isUserDocumentValidate = this.$refs.user_document.validate();
+
+            let isValidate = isUserInfoValidate && isUserAddressValidate && isUserDocumentValidate;
+            if (isValidate) {
                 let med = document.getElementById('success_message');
 
                 med.style.display = 'block';

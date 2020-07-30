@@ -79,7 +79,7 @@
                 }
 
                 // валидация тип документа
-                if (!Number.isInteger(this.documentTypeModel)) {
+                if (this.documentTypeModel == null) {
                     this.validate_warnings.documentTypeModel = text_not_filled;
                     isValidate = false;
                 }
