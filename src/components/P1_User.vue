@@ -135,7 +135,7 @@
 
                 // валидация даты рождения
                 if (!this.dob.length) {
-                    this.validate_warnings.dob = text_not_filled;
+                    this.validate_warnings.dob = 'Не выбрана дата';
                     isValidate = false;
                 }
 

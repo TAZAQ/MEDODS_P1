@@ -40,7 +40,7 @@
             <span class="validate-message" v-if="validate_warnings.givenDate">
                 {{ validate_warnings.givenDate }}
             </span>
-            <input type="date" :value="givenDate" required>
+            <input type="date" v-model="givenDate" required>
         </label>
 
 
@@ -79,13 +79,13 @@
                 }
 
                 // валидация тип документа
-                if (!this.documentTypeModel) {
+                if (!(this.documentTypeModel >= 0)) {
                     this.validate_warnings.documentTypeModel = text_not_filled;
                     isValidate = false;
                 }
 
                 // валидация даты выдачи
-                if (!this.givenDate) {
+                if (!this.givenDate.length) {
                     this.validate_warnings.givenDate = 'Не выбрана дата';
                     isValidate = false;
                 }
