@@ -1,7 +1,9 @@
 $bs_bb: border-box
 $text_color_0: #2c3e50
 
-body
+*,
+*:after,
+*:before
   box-sizing: $bs_bb
   -moz-box-sizing: $bs_bb
   -webkit-box-sizing: $bs_bb
@@ -13,14 +15,26 @@ body
   -moz-osx-font-smoothing: grayscale
   color: $text_color_0
 
-.align-center
-  text-align: center
-
-.form-container
   display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  justify-content: center
+  flex-direction: column
+  align-items: center
 
-.form-container-item
-  margin: 1rem
+
+.app-wrapper
+  display: grid
+  display: -ms-grid
+  gap: 1rem
+
+  width: 90%
+
+  @media screen and (min-width: 768px)
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: auto auto
+    width: 728px
+
+  @media screen and (min-width: 960px)
+    width: 920px
+
+  @media screen and (min-width: 1280px)
+    grid-template-columns: 1fr 1fr 1fr
+    width: 1240px
