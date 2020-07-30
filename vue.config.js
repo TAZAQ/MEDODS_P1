@@ -1,5 +1,5 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
-        ? '/MEDODS_P1_gp/'
+        ? '/MEDODS_P1/'
         : '/'
 }
