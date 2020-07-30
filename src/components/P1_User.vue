@@ -102,13 +102,7 @@
                 isDontSendSMS: false,
 
                 // массив сообщений валидации
-                validate_warnings: {
-                    lastName: '',
-                    firstName: '',
-                    dob: '',
-                    phone: '',
-                    clientsGroupModel: ''
-                }
+                validate_warnings: {}
             }
         },
         methods: {
@@ -121,10 +115,10 @@
                 // обнуление сообщений
                 this.validate_warnings = {
                     lastName: '',
-                        firstName: '',
-                        dob: '',
-                        phone: '',
-                        clientsGroupModel: ''
+                    firstName: '',
+                    dob: '',
+                    phone: '',
+                    clientsGroupModel: ''
                 }
 
                 // валидация фамилии
